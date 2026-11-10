@@ -1,4 +1,5 @@
 
+ // Problem 1: Function with Default Parameter
 function multiplyValue(
   value: number,
   multiplier: number = 2
@@ -6,6 +7,7 @@ function multiplyValue(
   return value * multiplier;
 }
 
+// Problem 2: Union Types and Type Narrowing
 function processInput(
   value: string | number | boolean
 ): string | number {
@@ -20,6 +22,7 @@ function processInput(
   return value ? "Active" : "Inactive";
 }
 
+// Problem 3: Readonly Tuple and Destructuring
 function formatCoordinate(
   coordinate: readonly [number, number, string]
 ): string {
@@ -28,6 +31,7 @@ function formatCoordinate(
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
+// Problem 4: Generic Function with Rest Parameters
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result: T[] = [];
 
@@ -38,6 +42,7 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
   return result;
 }
 
+// Problem 5: Interface and Array Filtering
 interface Course {
   title: string;
   students: number;
@@ -55,6 +60,7 @@ function getPopularCourses(
   );
 }
 
+// Problem 6: Generics and keyof Operator
 function pluckValues<T, K extends keyof T>(
   items: T[],
   key: K
@@ -62,6 +68,7 @@ function pluckValues<T, K extends keyof T>(
   return items.map((item) => item[key]);
 }
 
+// Problem 7: Classes, Inheritance and Access Modifiers
 class Employee {
   protected name: string;
   private baseSalary: number;
@@ -93,6 +100,7 @@ class Manager extends Employee {
   }
 }
 
+// Problem 8: Async Function and Promise Handling
 async function validateAgeAsync(
   age: number
 ): Promise<string> {
